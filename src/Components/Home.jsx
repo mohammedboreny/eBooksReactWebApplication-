@@ -10,11 +10,9 @@ import Container from 'react-bootstrap/Container';
 
 const Home = () => {
   const [getBooks, setBooks] = useState(books.eBooks);
-  useEffect({
-  
-    setBooks(books.eBooks)
-      , []
-  });
+  useEffect(() => {
+    setBooks(books.eBooks);
+  }, []);
   const ChangeHAndle = (e) => { 
     console.log(e.target.value);
     const filter = getBooks.filter((x) => {  x.language.indexOf(e.target.value)})
