@@ -10,20 +10,20 @@ import Container from 'react-bootstrap/Container';
 
 const Home = () => {
   const [getBooks, setBooks] = useState(books.eBooks);
-  // useEffect(() => {
-  //   setBooks(books.eBooks);
-  // },[]);
+  useEffect(() => {
+    setBooks(books.eBooks);
+  },[]);
   const ChangeHandle = (e) => { 
     console.log(e.target.value);
     const filter = getBooks.filter(x => {  return (x.language.toLowerCase().includes(e.target.value.toLowerCase()))})
-  //  console.log(filter);
+   console.log(filter);
     setBooks(filter);
     }
 
   
   return (
     <div className='pt-4'>
-      <input type="search" onChange={(e)=>ChangeHandle} name="x" id="" />
+      <input type="search" onChange={ChangeHandle} name="x" id="" />
       <Container>
       <Row>
       {getBooks.map((x)=> {return (
