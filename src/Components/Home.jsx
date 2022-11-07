@@ -13,11 +13,17 @@ const Home = () => {
   useEffect(() => {
     setBooks(books.eBooks);
   },[]);
-  const ChangeHandle = (e) => { 
+  const ChangeHandle = (e) => {
+    if (e.target.value == "") {
+      setBooks(books.eBooks);
+      
+    }
+    else{
     console.log(e.target.value);
     const filter = getBooks.filter(x => {  return (x.language.toLowerCase().includes(e.target.value.toLowerCase()))})
    console.log(filter);
-    setBooks(filter);
+      setBooks(filter);
+    }
     }
 
   
