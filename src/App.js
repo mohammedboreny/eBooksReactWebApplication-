@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Check from "./Components/Check";
+import Promis from "./Components/promis";
 import {
 	Routes,
 	Route,
@@ -14,14 +15,15 @@ import {
 function App() {
   return (
     <div>
+      <Promis/>
        {/* <Header />
       <Routes>
         <Route exact path='/home' element= {<Home/>}></Route>
 
       </Routes> */}
       {/* <Check/> */}
-      <Home/>
-      <Footer />
+      {/* <Home/>
+      <Footer /> */}
     </div>
   );
 }

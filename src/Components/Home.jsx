@@ -1,8 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import books from '../Records.json';
-import Check from   '../Components/Check';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
